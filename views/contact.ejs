@@ -1,0 +1,48 @@
+<%- include("partials/header"); -%>
+<h1>Contact Us</h1>
+<p>
+  Feel free to reach out to us with any questions or feedback you may have. We'd
+  love to hear from you!
+</p>
+
+<% if (success) { %>
+  <div class="alert alert-success">Your details have been successfully saved.</div>
+<% } %>
+
+<!-- your contact form HTML here -->
+
+
+<form action="/ContactsUs" method="post">
+  <label for="name">Name:</label>
+  <br />
+  <input type="text" id="name" name="name" required />
+  <br /><br />
+
+  <label for="email">Email:</label>
+  <br />
+  <input type="email" id="email" name="email" required />
+  <br /><br />
+
+  <label for="subject">Subject:</label>
+  <br />
+  <input type="text" id="subject" name="subject" />
+  <br /><br />
+
+  <label for="message">Message:</label>
+  <br />
+  <textarea id="message" name="message" required></textarea>
+  <br /><br />
+  <button class="btn btn-primary" type="submit" name="button">Submit</button>
+</form>
+
+<br /><br />
+<p>You can also reach us at:</p>
+<ul>
+  <li>Phone: +91 7828108600</li>
+  <li>Email: jain.abhishek.1702@gmail.com</li>
+  <li>
+    Address: 44, Diamond Hostel, NIT Trichy, Thuvakudi, Tiruchirappalli (T.N)
+  </li>
+</ul>
+
+<%- include("partials/footer"); -%>

@@ -1,0 +1,72 @@
+<%- include("partials/header"); -%>
+<style>
+  .container {
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  a {
+    color: #337ab7;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+</style>
+
+<div class="homePageBox"></div>
+<h1>Welcome to Our Blog!</h1>
+<p>Dear readers,</p>
+<p>
+  We are thrilled to welcome you to our brand new blog! Our aim is to provide
+  you with engaging and informative content on a wide range of topics, from
+  lifestyle and travel to technology and business.
+</p>
+<p>
+  At our blog, we believe in the power of storytelling. Each post you read is
+  written by a member of our team or a guest contributor who has a unique
+  perspective to share. We want to inspire and educate you through our words and
+  images, and we hope you find our blog to be a valuable resource.
+</p>
+<p>
+  To make sure you don't miss out on any of our latest posts, be sure to
+  <a href="/contact">subscribe to our email newsletter</a> and follow us on
+  social media. We'll also be hosting giveaways and other fun events, so stay
+  tuned!
+</p>
+<p>
+  Thank you for taking the time to visit our blog. We can't wait to start this
+  journey with you and see where it takes us.
+</p>
+
+
+<% posts.forEach(function(post) { %>
+  <hr>
+<h1><%= post.title %></h1>
+<p>
+  <%= post.content.substring(0, 100) + " ..." %>
+  <a href="/posts/<%= post.title %>">Read More</a>
+</p>
+
+<% });%> 
+</div>
+<%- include("partials/footer"); -%>
